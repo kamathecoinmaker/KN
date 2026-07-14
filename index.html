@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kamangu Ngona · Portfolio</title>
+  <meta name="description" content="Computer Science graduate with a background in technical sales, lead generation, and e-commerce, seeking internship and entry-level roles in technical sales, business analysis, IT support, or software development." />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Kamangu Ngona · Technical Sales & Software Portfolio" />
+  <meta property="og:description" content="Computer Science graduate · 4+ years in sales & e‑commerce · Open to internships & entry‑level technical roles." />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1200&q=80" />
+  <meta property="og:url" content="https://kamangu.dev" />
+  <meta property="og:type" content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome 6 -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== NAVIGATION ========== -->
+  <nav id="navbar">
+    <div class="container">
+      <a href="#hero" class="logo" aria-label="Home">
+        <span>K</span><span class="accent-char">N</span><span class="logo-dot"></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#hero" class="active">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <i class="fas fa-moon"></i>
+          </button>
+        </li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ========== MAIN CONTENT ========== -->
+  <main>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg-img">
+        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=2000&q=80" alt="" role="presentation">
+      </div>
+      <div class="container hero-content">
+        <div class="hero-text">
+          <div class="badge-wrap">
+            <span class="badge">✦ Lusaka, Zambia · Remote &amp; On‑site · Willing to relocate</span>
+            <span class="availability-badge"><span class="pulse-dot"></span> Open to Work</span>
+          </div>
+          <h1>
+            Sells the value.<br />
+            <span class="highlight">Builds the thing.</span>
+          </h1>
+          <div class="typing"><span id="typedText">Technical Sales Engineer</span></div>
+          <p>
+            I'm Kamangu Ngona — a Computer Science graduate with 4+ years closing deals,
+            generating pipeline, and running E‑commerce. I'm targeting <strong>graduate-level
+            internships and entry-level roles in Technical Sales or Solutions Engineering</strong>,
+            where I can apply my Commercial experience to a Technical product.
+          </p>
+          <div class="hero-cta">
+            <a href="#projects" class="btn">View My Work</a>
+            <a href="#experience" class="btn btn-outline">See Experience</a>
+            <a href="Kamangu_Ngona_Resume.pdf" download class="btn btn-outline btn-sm">
+              <i class="fas fa-file-pdf"></i> Download CV
+            </a>
+            <a href="mailto:kcngona@gmail.com?subject=Let's%20talk" class="btn btn-sm" style="background: var(--accent); color: #181813;">
+              <i class="fas fa-envelope"></i> Get in Touch
+            </a>
+          </div>
+        </div>
+        <div class="hero-image">
+          <div class="avatar">
+            <div class="avatar-inner">
+              <img src="portfolio pic.png" alt="Kamangu Ngona" />
+              <span class="fallback-text"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== TRUST BADGES ========== -->
+    <section class="trust-section">
+      <div class="container">
+        <div class="trust-item"><i class="fab fa-google"></i><span>Google Data Analytics</span></div>
+        <div class="trust-item"><i class="fab fa-meta"></i><span>Meta Social Media Marketing</span></div>
+        <div class="trust-item"><i class="fas fa-cloud"></i><span>Salesforce &amp; SV Academy Program</span></div>
+        <div class="trust-item"><i class="fas fa-chart-line"></i><span>HubSpot CRM Fundamentals</span></div>
+        <div class="trust-item"><i class="fab fa-linux"></i><span>Linux CLI Basics</span></div>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div>
+            <h2 class="section-title">Ten years of client work,<br /><span class="accent">one degree behind it.</span></h2>
+            <p class="section-subtitle" style="margin-bottom: 0;">
+              My path into tech didn't start in a classroom — it started on Upwork in 2013,
+              doing VA and Sales work, and later Selling High Value Solar products door‑to‑door in Lusaka, Zambia.
+            </p>
+          </div>
+          <div class="about-text">
+            <p>
+              What that decade taught me is <strong>how businesses actually work</strong> — how a lead
+              turns into a customer, how a storefront turns into repeat revenue, how a target gets hit
+              three months early. I'm now finishing a <strong>BSc in Computer Science</strong> at the
+              University of the People to put a technical foundation under that instinct.
+            </p>
+            <p>
+              I'm building toward roles that sit at that intersection — <strong>technical sales, solutions
+              engineering, business/systems analysis, or software development</strong> — where understanding
+              both the customer and the codebase is the actual job.
+            </p>
+            <div class="about-stats">
+              <div class="stat"><div class="stat-number">4+ yrs</div><div class="stat-label">Commercial &amp; client‑facing</div></div>
+              <div class="stat"><div class="stat-number">3 mo</div><div class="stat-label">To promotion at Sun King</div></div>
+              <div class="stat"><div class="stat-number">~5 yrs</div><div class="stat-label">B2C e‑commerce ops</div></div>
+            </div>
+            <div class="bridge-card">
+              <h3>The bridge, in short</h3>
+              <div class="bridge-row"><span class="label">commercial_side</span><span class="value">sales · CRM · lead gen</span></div>
+              <div class="bridge-row"><span class="label">technical_side</span><span class="value">Python · Java · JS · PHP</span></div>
+              <div class="bridge-row"><span class="label">location</span><span class="value">Lusaka, Zambia</span></div>
+              <div class="bridge-row"><span class="label">perspective</span><span class="value">pan‑African, market‑first</span></div>
+              <div class="bridge-row"><span class="label">status</span><span class="value">open to work</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== EXPERIENCE ========== -->
+    <section class="section experience" id="experience">
+      <div class="container">
+        <h2 class="section-title">A ledger of the <span class="accent">work.</span></h2>
+        <p class="section-subtitle">From field sales to building systems — every role taught me something.</p>
+        <div class="exp-grid">
+          <div class="exp-card">
+            <div class="exp-date">Apr – Nov 2023</div>
+            <div class="exp-content">
+              <div class="role">Super Certified Field Sales Executive</div>
+              <div class="org">Sun King</div>
+              <div class="desc">Promoted after three months for consistently exceeding targets. Built and managed a customer base using consultative selling.</div>
+            </div>
+            <div class="exp-flag">promoted</div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-date">Jan – Nov 2023</div>
+            <div class="exp-content">
+              <div class="role">Field Sales Executive</div>
+              <div class="org">Sun King</div>
+              <div class="desc">Generated leads and closed sales for solar energy products through direct engagement. Delivered product demos and after‑sales support.</div>
+            </div>
+            <div class="exp-flag">sales</div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-date">Oct 2022 – Apr 2023</div>
+            <div class="exp-content">
+              <div class="role">Marketing Lead Generation Analyst</div>
+              <div class="org">Adaptive Product</div>
+              <div class="desc">Analyzed market data to identify high‑value leads. Ran social advertising and outreach campaigns using Agile methodologies.</div>
+            </div>
+            <div class="exp-flag">analytics</div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-date">Sep 2015 – Jun 2020</div>
+            <div class="exp-content">
+              <div class="role">E‑commerce Manager</div>
+              <div class="org">4th SALE</div>
+              <div class="desc">Managed daily operations, order fulfillment, and customer satisfaction for a B2C online storefront across a five‑year tenure.</div>
+            </div>
+            <div class="exp-flag">5 yrs</div>
+          </div>
+          <div class="exp-card">
+            <div class="exp-date">2013 – Present</div>
+            <div class="exp-content">
+              <div class="role">Freelance Sales &amp; Virtual Assistant</div>
+              <div class="org">Self‑Employed · Upwork</div>
+              <div class="desc">Delivered VA, sales, and admin support to international clients across a decade of freelance work.</div>
+            </div>
+            <div class="exp-flag">10+ yrs</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKILLS ========== -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <h2 class="section-title">Two toolkits, <span class="accent">one operator.</span></h2>
+        <p class="section-subtitle">Technical depth paired with commercial instinct.</p>
+        <div class="skills-split">
+          <div class="skill-col">
+            <h3><i class="fas fa-code"></i> Technical</h3>
+            <div class="pill-group">
+              <span class="pill">Python</span><span class="pill">Java</span><span class="pill">JavaScript</span>
+              <span class="pill">PHP</span><span class="pill">HTML / CSS</span><span class="pill">Data Structures</span>
+              <span class="pill">Databases</span><span class="pill">Linux CLI</span>
+            </div>
+          </div>
+          <div class="skill-col">
+            <h3><i class="fas fa-handshake"></i> Commercial</h3>
+            <div class="pill-group">
+              <span class="pill">Negotiation</span><span class="pill">Lead Generation</span><span class="pill">Market Research</span>
+              <span class="pill">Data Analysis</span><span class="pill">CRM (HubSpot)</span><span class="pill">Social Advertising</span>
+              <span class="pill">Copywriting</span><span class="pill">Agile Collaboration</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROJECTS ========== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <h2 class="section-title">Recently <span class="accent">built.</span></h2>
+        <p class="section-subtitle">Completed projects that demonstrate my backend and data skills.</p>
+        <div class="projects-grid">
+          <!-- Project 1 -->
+          <div class="project-card">
+            <div class="project-thumb" style="background: linear-gradient(135deg, #F5B700, #FFD93D);">
+              ⚙️
+              <span class="status-badge completed">Completed</span>
+            </div>
+            <div class="project-info">
+              <h3>Ticketing‑Mesh</h3>
+              <p>A RESTful ticketing system with user authentication and ticket prioritization.</p>
+              <div class="project-tags"><span>Java</span><span>Spring Boot</span></div>
+              <button class="toggle-details" onclick="toggleDetails(this)">View Details <i class="fas fa-chevron-down"></i></button>
+              <div class="project-details">
+                <p>Implements a microservices‑style architecture with JWT-based auth, role-based access, and a PostgreSQL backend. Built to solidify production‑grade REST API patterns.</p>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/kamangu/ticketing-mesh" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="project-card">
+            <div class="project-thumb" style="background: linear-gradient(135deg, #E8A800, #F5C842);">
+              🔍
+              <span class="status-badge completed">Completed</span>
+            </div>
+            <div class="project-info">
+              <h3>Insight‑Engine</h3>
+              <p>A retrieval‑focused application that explores embeddings and vector search.</p>
+              <div class="project-tags"><span>Python</span><span>ChromaDB</span></div>
+              <button class="toggle-details" onclick="toggleDetails(this)">View Details <i class="fas fa-chevron-down"></i></button>
+              <div class="project-details">
+                <p>Uses sentence‑transformers to generate embeddings and ChromaDB for semantic similarity search. A practical dive into data analysis, embeddings, and information retrieval.</p>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/kamangu/insight-engine" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="project-card">
+            <div class="project-thumb" style="background: linear-gradient(135deg, #D4A000, #F0C830);">
+              🚛
+              <span class="status-badge completed">Completed</span>
+            </div>
+            <div class="project-info">
+              <h3>Geo‑Fleet</h3>
+              <p>A real‑time fleet‑tracking service focused on low‑latency messaging.</p>
+              <div class="project-tags"><span>Node.js</span><span>MessagePack</span></div>
+              <button class="toggle-details" onclick="toggleDetails(this)">View Details <i class="fas fa-chevron-down"></i></button>
+              <div class="project-details">
+                <p>Built with WebSocket and MessagePack for compact, high‑throughput data exchange. Simulates live vehicle tracking and demonstrates event‑driven architecture.</p>
+              </div>
+              <div class="project-actions">
+                <a href="https://github.com/kamangu/geo-fleet" target="_blank" rel="noopener" class="btn btn-sm btn-outline">
+                  <i class="fab fa-github"></i> View on GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========MY EDUCATION ========== -->
+    <section class="section edu-section" id="education">
+      <div class="container">
+        <h2 class="section-title">Formal training, <span class="accent">stacked on real experience.</span></h2>
+        <p class="section-subtitle">BSc Computer Science and professional certifications.</p>
+        <div class="edu-grid">
+          <div class="edu-card">
+            <h3>BSc Computer Science</h3>
+            <div class="meta">University of the People — Expected 2026</div>
+            <p>Data Structures, Algorithms, Databases, Software Engineering, Operating Systems, Networking &amp; Security, Web Programming.</p>
+          </div>
+          <div class="edu-card">
+            <h3>Certifications</h3>
+            <ul class="cert-list">
+              <li><div class="cert-name">Google Data Analytics</div><div class="cert-meta">Google · 2023</div><div class="cert-desc">Data cleaning, processing, and spreadsheet analysis.</div></li>
+              <li><div class="cert-name">Social Media Marketing</div><div class="cert-meta">Meta · 2023–2024</div><div class="cert-desc">Social strategy, content, and paid advertising.</div></li>
+              <li><div class="cert-name">Sales Development</div><div class="cert-meta">Salesforce &amp; SV Academy · 2023</div><div class="cert-desc">Prospecting, pipeline, and CRM sales.</div></li>
+              <li><div class="cert-name">HubSpot CRM &amp; Linux CLI</div><div class="cert-meta">2022</div><div class="cert-desc">CRM pipeline and Linux fundamentals.</div></li>
+              <li><div class="cert-name">HTML, CSS &amp; JS Portfolio</div><div class="cert-meta">2022</div><div class="cert-desc">Front‑end fundamentals for functional websites.</div></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CONTACT ========== -->
+    <section class="section" id="contact">
+      <div class="container">
+        <h2 class="section-title">Let's talk about <span class="accent">where I fit.</span></h2>
+        <p class="section-subtitle">Open to internships and entry‑level roles in Technical Sales, Business Analysis, IT Support, or Software Development — remote, willing to relocate.</p>
+        <div class="contact-wrapper">
+          <div class="contact-info">
+            <h3>Get in touch</h3>
+            <p>Prefer to keep direct communication secure? Fill in the form, or connect with me on LinkedIn.</p>
+            <div class="contact-detail"><i class="fas fa-map-marker-alt"></i><span>Lusaka, Zambia</span></div>
+            <div class="contact-detail"><i class="fab fa-linkedin-in"></i><span><a href="https://www.linkedin.com/in/kamangu-ngona-b62b47ab" target="_blank" rel="noopener noreferrer">linkedin.com/in/kamangu-ngona</a></span></div>
+            <div class="contact-privacy-note"><i class="fas fa-shield-alt"></i> Your email information is safe. Reach out via the form or LinkedIn.</div>
+          </div>
+          <form class="contact-form" id="contactForm" action="https://formsubmit.co/kcngona@gmail.com" method="POST">
+            <!-- FormSubmit required fields -->
+            <input type="hidden" name="_captcha" value="false">
+            <input type="hidden" name="_template" value="table">
+            <input type="hidden" name="_ajax" value="true">
+
+            <!-- Honey-pot spam trap (optional but recommended) -->
+            <input type="text" name="_honey" style="display:none">
+
+            <input type="text" name="name" placeholder="Your name" required />
+            <input type="email" name="email" placeholder="Your email" required />
+            <textarea name="message" placeholder="Tell me about your opportunity..." required></textarea>
+            <button type="submit" class="btn" id="contactSubmitBtn">Get in touch</button>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+  <!-- ========== END MAIN ========== -->
+
+  <!-- ========== STICKY BAR ========== -->
+  <div class="sticky-bar" id="stickyBar">
+    <div class="sticky-text">
+      <strong>Kamangu Ngona</strong> · Open to internships &amp; entry-level roles
+      <span class="availability-badge" style="margin-left: 10px;"><span class="pulse-dot"></span> Open to Work</span>
+    </div>
+    <div class="sticky-actions">
+      <a href="mailto:kcngona@gmail.com?subject=Let's%20talk" class="btn btn-sm" style="background: var(--accent); color: #181813;"><i class="fas fa-envelope"></i> Get in Touch</a>
+      <a href="https://www.linkedin.com/in/kamangu-ngona-b62b47ab" target="_blank" rel="noopener noreferrer" class="btn btn-sm btn-outline">LinkedIn</a>
+    </div>
+  </div>
+
+  <!-- ========== TOAST NOTIFICATION ========== -->
+  <div id="toast" class="toast">
+    <i class="fas fa-check-circle"></i>
+    <span id="toastMessage">Message sent successfully!</span>
+  </div>
+
+  <!-- ========== FOOTER ========== -->
+  <footer>
+    <div class="container">
+      <span class="footer-text">&copy;Copyright 2026 Kamangu Chandi Ng'ona · Lusaka, Zambia</span>
+      <div class="socials">
+        <a href="https://www.linkedin.com/in/kamangu-ngona-b62b47ab" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+        <a href="mailto:kcngona@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== BACK TO TOP ========== -->
+  <a href="#hero" id="backToTop" aria-label="Back to top"><i class="fas fa-arrow-up"></i></a>
+
+  <!-- ========== SCRIPTS ========== -->
+  <script src="script.js"></script>
+</body>
+</html>

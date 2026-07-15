@@ -389,12 +389,15 @@ nav .container {
   inset: 0;
   z-index: 0;
 }
-.hero-bg-img img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  filter: var(--hero-img-filter);
-  transition: filter 0.5s ease;
+.hero-bg-img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  /* Solid color background matching your theme */
+  background-color: var(--bg-primary);
+  /* Subtle accent glow for depth without hurting readability */
+  background-image: radial-gradient(circle at 70% 20%, var(--accent-glow), transparent 60%);
+  transition: background-color 0.5s ease, background-image 0.5s ease;
 }
 .hero-bg-img::after {
   content: '';

@@ -1,4 +1,4 @@
-// ---------- Contact form: AJAX submission via FormSubmit ----------
+// ---------- Contact form: AJAX submission ----------
 (function initForm() {
   const form = document.getElementById('contactForm');
   const btn = document.getElementById('contactSubmitBtn');
@@ -18,8 +18,6 @@
 
   form.addEventListener('submit', async function(e) {
     e.preventDefault();
-
-    // Disable button and show loading state
     btn.disabled = true;
     btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
 
@@ -29,39 +27,28 @@
       const response = await fetch(form.action, {
         method: form.method || 'POST',
         body: formData,
-        headers: {
-          'Accept': 'application/json'
-        }
+        headers: { 'Accept': 'application/json' }
       });
 
       if (response.ok) {
-        showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
-        form.reset();
+        const data = await response.json();
+        if (data.success) {
+          showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
+          form.reset();
+        } else {
+          showToast(data.message || 'Something went wrong.', 'error');
+        }
       } else {
-        const errorData = await response.json();
-        showToast(errorData.message || 'Something went wrong. Please try again.', 'error');
+        showToast('Server error. Please try again later.', 'error');
       }
     } catch (error) {
-      showToast('Network error. Please check your connection and try again.', 'error');
+      showToast('Network error. Please check your connection.', 'error');
     } finally {
       btn.disabled = false;
-      btn.innerHTML = 'Get in touch';
+      btn.innerHTML = 'Send Message';
     }
   });
 })();
-
-// ---------- Project Details Toggle ----------
-function toggleDetails(btn) {
-  const details = btn.nextElementSibling;
-  const icon = btn.querySelector('i');
-  if (details.classList.contains('open')) {
-    details.classList.remove('open');
-    btn.innerHTML = 'View Details <i class="fas fa-chevron-down"></i>';
-  } else {
-    details.classList.add('open');
-    btn.innerHTML = 'Hide Details <i class="fas fa-chevron-up"></i>';
-  }
-}
 
 // ---------- Nav: Scroll shrink & active state ----------
 (function initNav() {
@@ -86,27 +73,30 @@ function toggleDetails(btn) {
   sections.forEach(s => observer.observe(s));
 })();
 
-// ---------- Theme Toggle ----------
+// ---------- Theme Toggle (Fixed Persistence) ----------
 (function initTheme() {
   const toggle = document.getElementById('theme-toggle');
   const icon = toggle.querySelector('i');
+  
+  // Check localStorage for a saved preference (default to light if not set)
   const stored = localStorage.getItem('theme');
   if (stored === 'dark') {
     document.documentElement.classList.add('dark-mode');
-    icon.classList.replace('fa-moon', 'fa-sun');
+    icon.classList.replace('fa-sun', 'fa-moon');
   }
+
   toggle.addEventListener('click', () => {
     const isDark = document.documentElement.classList.toggle('dark-mode');
-    icon.classList.toggle('fa-moon', !isDark);
-    icon.classList.toggle('fa-sun', isDark);
+    icon.classList.toggle('fa-moon', isDark);
+    icon.classList.toggle('fa-sun', !isDark);
     localStorage.setItem('theme', isDark ? 'dark' : 'light');
   });
 })();
 
-// ---------- Typing Effect (narrowed to target roles) ----------
+// ---------- Typing Effect ----------
 (function initTyping() {
   const el = document.getElementById('typedText');
-  const words = ['Technical Sales Engineer', 'Solutions Engineer'];
+  const words = ['Junior Full-Stack Developer', 'Software Engineer', 'Problem Solver'];
   let idx = 0, charIdx = 0, isDeleting = false;
   function type() {
     const current = words[idx];
@@ -126,7 +116,7 @@ function toggleDetails(btn) {
         idx = (idx + 1) % words.length;
       }
     }
-    setTimeout(type, isDeleting ? 60 : 120);
+    setTimeout(type, isDeleting ? 50 : 100);
   }
   type();
 })();
@@ -142,20 +132,37 @@ function toggleDetails(btn) {
   sections.forEach(s => observer.observe(s));
 })();
 
-// ---------- Mobile Menu ----------
+// ---------- Mobile Menu (Fixed iOS Scroll Lock) ----------
 (function initMobileMenu() {
   const hamburger = document.getElementById('hamburger');
   const navLinks = document.getElementById('navLinks');
+  let scrollY = 0;
+
   hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('open');
     navLinks.classList.toggle('open');
-    document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    
+    if (navLinks.classList.contains('open')) {
+      scrollY = window.scrollY;
+      document.body.style.position = 'fixed';
+      document.body.style.top = `-${scrollY}px`;
+      document.body.style.width = '100%';
+    } else {
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY);
+    }
   });
+
   document.querySelectorAll('.nav-links a').forEach(link => {
     link.addEventListener('click', () => {
       hamburger.classList.remove('open');
       navLinks.classList.remove('open');
-      document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.top = '';
+      document.body.style.width = '';
+      window.scrollTo(0, scrollY);
     });
   });
 })();
